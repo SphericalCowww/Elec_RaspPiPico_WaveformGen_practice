@@ -6,7 +6,7 @@
      cd blinkLED
      make
    
-Connect ground, resistor, and LED like shown in ''src/blinkLED/blinkLED.png''. Then connect the power of pico while pushing the white button, followed by:
+Connect ground, resistor, and LED like shown in `src/blinkLED/blinkLED.png`. Then connect the power of pico while pushing the white button, followed by:
 
      sudo cp blinkLED.uf2 /mnt/pico
      sudo sync
