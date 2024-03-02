@@ -1,0 +1,34 @@
+.program blinkLED_PIO
+
+.wrap_target
+    set pins, 1 [19]        ; turn pins high for 20 cycles
+    nop         [19]        ; wait 20 cycle
+    nop         [19]          
+    nop         [19]          
+    nop         [19]        ; 100 cycles each
+    set pins, 0 [19]
+    nop         [19]
+    nop         [19]
+    nop         [19]
+    nop         [19]
+.wrap
+
+;-------------------------------------------------------------------------------------------------------------------------
+; C-program to initialize this PIO
+% c-sdk {
+    void blinkLED_PIO_init(PIO pio, uint stateMachine, uint memoryOffset, uint pin, float clockDiv) {
+        // the following functions are generated in blinkLED_PIO.pio.h; key word "state machine" in manual
+        pio_sm_config configObj = blinkLED_PIO_program_get_default_config(memoryOffset); 
+        pio_gpio_init(pio, pin);
+        sm_config_set_set_pins(&configObj, pin, 1);
+        pio_sm_set_consecutive_pindirs(pio, stateMachine, pin, 1, true);
+        sm_config_set_clkdiv(&configObj, clockDiv);         //clockDiv = 1.0, state machine runs at default 125MHz
+    }
+%}
+
+
+
+
+
+
+
