@@ -26,6 +26,6 @@ Connect ground, resistor, and LED like shown in `src/blinkLED/blinkLED.png`. The
 
 ## References:
 - Raspberry Pi Pico C/C++ SDK (<a href="https://www.raspberrypi.com/documentation/microcontrollers/c_sdk.html">website</a>)
-- DigiKey, Intro to Raspberry Pi Pico and RP2040 - C/C++ Part 3: How to Use PIO | Digi-Key Electronics (<a href="[https://www.youtube.com/watch?v=_lZ1Pw6WAqI](https://www.youtube.com/watch?v=JSis2NU65w8)">YouTube</a>)
+- DigiKey, Intro to Raspberry Pi Pico and RP2040 - C/C++ Part 3: How to Use PIO | Digi-Key Electronics (<a href="https://www.youtube.com/watch?v=_lZ1Pw6WAqI">YouTube</a>)
 - Life with David, Raspberry Pi Pico PIO - Ep. 14 - Arbitrary Waveform Generator (<a href="https://www.youtube.com/watch?v=_lZ1Pw6WAqI">YouTube</a>)
 
