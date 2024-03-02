@@ -16,7 +16,7 @@ endif()
 pico_sdk_init()
 add_subdirectory(blinkLED)
 add_subdirectory(blinkLED_PIO)
-#add_subdirectory(arbitraryWaveformGen)
+add_subdirectory(arbitraryWaveformGen)
 
 add_compile_options(-Wall
         -Wno-format          # int != int32_t as far as the compiler is concerned because gcc has int32_t as long int
