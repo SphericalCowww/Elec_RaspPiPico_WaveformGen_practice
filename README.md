@@ -2,6 +2,7 @@
 
 ## Blink LED at GPIO 10 pin
      mkdir build
+     cd build
      cmake ../src
      cd blinkLED
      make
@@ -13,6 +14,7 @@ Connect ground, resistor, and LED like shown in `src/blinkLED/blinkLED.png`. The
 
 ## Blink LED at GPIO 10 pin with Raspberry PI's PIO 
      mkdir build
+     cd build
      cmake ../src
      cd blinkLED_PIO
      make
