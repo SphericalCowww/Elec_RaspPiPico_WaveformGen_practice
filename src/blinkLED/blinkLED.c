@@ -10,10 +10,10 @@ int main() {
     gpio_set_dir(LED_PIN, GPIO_OUT);
     while(true) {
         gpio_put(LED_PIN, 1);
-        printf("ON");
+        printf("ON\n");
         sleep_ms(sleepTime);
         gpio_put(LED_PIN, 0);
-        printf("OFF");
+        printf("OFF\n");
         sleep_ms(sleepTime);
     }
     return 0;

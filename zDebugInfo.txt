@@ -1,0 +1,7 @@
+When using PIO with serial output
+
+dmesg
+[ 3538.157272] device offline error, dev sda, sector 260 op 0x1:(WRITE) flags 0x100000 phys_seg 1 prio class 2
+[ 3538.157281] Buffer I/O error on dev sda1, logical block 259, lost async page write
+[ 3538.196422] FAT-fs (sda1): unable to read boot sector to mark fs as dirty
+
