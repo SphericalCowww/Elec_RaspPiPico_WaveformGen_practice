@@ -12,6 +12,15 @@ Connect ground, resistor, and LED like shown in `src/blinkLED/blinkLED.png`. The
      sudo cp blinkLED.uf2 /mnt/pico
      sudo sync
 
+The output can also be tracked by the host machine via USB connection and ''minicom''. On terminal, see if ''/dev/ttyACM0'' connection exist:
+
+     dmesg                
+     lsusb
+     ls /dev
+Then do,
+
+     minicom -b 115200 -o -D /dev/ttyACM0
+
 ## Blink LED at GPIO 10 pin with Raspberry PI's PIO 
      mkdir build
      cd build
@@ -24,6 +33,7 @@ Connect ground, resistor, and LED like shown in `src/blinkLED/blinkLED.png`. The
      sudo cp blinkLED_PIO.uf2 /mnt/pico
      sudo sync
 
+State machines of PIO don't do output, so ''minicom'' will not help.
 ## David's 100kHz Arbitrary Waveform Generator
 
 ## References:
