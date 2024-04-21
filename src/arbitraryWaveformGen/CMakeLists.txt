@@ -14,12 +14,13 @@ target_link_libraries(arbitraryWaveformGen
 		hardware_structs
         )
 
-# create map/bin/hex file etc.
-pico_add_extra_outputs(arbitraryWaveformGen)
-
 # Enable usb output, disable uart output
 pico_enable_stdio_usb(arbitraryWaveformGen 1)
 pico_enable_stdio_uart(arbitraryWaveformGen 0)
+
+# create map/bin/hex file etc.
+pico_add_extra_outputs(arbitraryWaveformGen)
+
 
 
 

@@ -10,17 +10,19 @@ int main() {
 
     stdio_init_all();
     PIO pio = pio0;
-    uint memory_offset = pio_add_program(pio, &blinkLED_PIO_program);
-    printf("Loaded program at %d\n", memory_offset);
-
     uint stateMachine = pio_claim_unused_sm(pio, true);
+    uint memory_offset = pio_add_program(pio, &blinkLED_PIO_program);
     blinkLED_PIO_program_init(pio, stateMachine, memory_offset, led_pin);
     pio_sm_set_enabled(pio, stateMachine, true);
+
+
     pio->txf[stateMachine] = clock_get_hz(clk_sys)/(2*pio_freq) - 3;    // factor 2 for on/off
-    printf("Blinking pin %d at %d Hz\n", led_pin, pio_freq);
 
     // without the following, serial output on /dev/ttyACM0 does not connect
-    while(true) { }
+    while(true) { 
+        printf("Loaded program at %d\n", memory_offset);
+        printf("Blinking pin %d at %d Hz\n", led_pin, pio_freq);
+    }
 
     /*
     // can also blink with the following independently
