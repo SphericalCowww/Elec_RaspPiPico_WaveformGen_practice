@@ -40,7 +40,20 @@ Using David's digital-to-analog converter (DAC) circuit and source code to build
   <img src="https://github.com/SphericalCowww/Elec_RaspPiPico_WaveformGen_practice/blob/main/dac_circuit_labeled.png" width="300">
 </figure>
 
-Coding-wise, David devised a speed-up plan swapping between 2 state machines. To run the code, it is the same procedure:
+Coding-wise, David devised a speed-up plan swapping between 2 state machines. To modify the waveform, look into the following lines in ''arbitraryWaveformGen.c'':
+
+     //////////////////////////// Put the AWG formula here:
+     //awg_buff[i] = 128+(sin((factor)*2*PI)*127);
+     awg_buff[i] = 128+(sin((factor)*2*PI)*80);
+
+        
+     //if(i < 128) 
+     //    awg_buff[i] = bufdepth - 1;
+     //else
+     //    awg_buff[i] = 0;
+     //////////////////////////////////////////////////////
+
+To run the code, it is the same procedure:
 
      mkdir build
      cd build
@@ -67,6 +80,6 @@ The resulting 100kHz square and sine waves are shown as follows. The waveform sh
 ## References:
 - Raspberry Pi Pico C/C++ SDK (<a href="https://www.raspberrypi.com/documentation/microcontrollers/c_sdk.html">website</a>)
 - DigiKey, Intro to Raspberry Pi Pico and RP2040 - C/C++ Part 3: How to Use PIO | Digi-Key Electronics (<a href="https://www.youtube.com/watch?v=_lZ1Pw6WAqI">YouTube</a>)
-- Life with David, Raspberry Pi Pico PIO - Ep. 14 - Arbitrary Waveform Generator (<a href="https://www.youtube.com/watch?v=_lZ1Pw6WAqI">YouTube</a>)
+- Life with David, Raspberry Pi Pico PIO - Ep. 14 - Arbitrary Waveform Generator (<a href="https://www.youtube.com/watch?v=_lZ1Pw6WAqI">YouTube</a>, <a href="https://github.com/LifeWithDavid/Raspberry-Pi-Pico-PIO/blob/d244a4b7d0b5c187c08e7311026b45fdff7da13e/EP%2014%20AWG%20Files.txt">GitHub</a>)
 - element14 presents, How Do DACs Work? - The Learning Circuit (<a href="https://www.youtube.com/watch?v=YAxrmoVtEtE&t=210s">YouTube</a>)
 
