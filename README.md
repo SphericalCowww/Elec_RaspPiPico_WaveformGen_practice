@@ -1,4 +1,4 @@
-# Elec_RaspPiPico_WaveformGen_practice
+# Learning to use Raspberry Pi Pico State Machine to build an 100kHz Arbitrary Waveform Generator
 
 ## Blink LED at GPIO 10 pin
      mkdir build
