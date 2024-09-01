@@ -1,5 +1,7 @@
 # Learning to use Raspberry Pi Pico State Machine to build an 100kHz Arbitrary Waveform Generator
 
+Note: see Project 9-10 Attempted Arbitrary Waveform Generator of the <a href="https://github.com/SphericalCowww/Elec_FPGA_iCEstick_practice/blob/main/README.md">github link</a> to see how a faster waveform generator can be achieved using FPGA.
+
 ## Blink LED at GPIO 10 pin
      mkdir build
      cd build
