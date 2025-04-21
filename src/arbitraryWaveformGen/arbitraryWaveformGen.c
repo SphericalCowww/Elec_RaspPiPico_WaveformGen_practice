@@ -32,7 +32,7 @@ int main()
 
 //////////////////////////// Put the AWG formula here:
 		//awg_buff[i] = 128+(sin((factor)*2*PI)*127);
-        awg_buff[i] = 128+(sin((factor)*2*PI)*80);
+        awg_buff[i] = 128 + 80*sin((factor)*2*PI);
 
         
         //if(i < 128) 
